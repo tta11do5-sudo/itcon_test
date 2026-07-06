@@ -201,9 +201,9 @@ export const Solutions: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 border border-slate-800 shadow-xl flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="space-y-3 max-w-2xl">
-            <h3 className="text-xl md:text-2xl font-bold tracking-tight">이중화 구성 및 클라우드 맞춤 이중망 설계 지원</h3>
+            <h3 className="text-xl md:text-2xl font-bold tracking-tight">서버 스토리지 견적 및 솔루션 맞춤 설계 지원</h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              ITCON의 시니어 설계 자문진이 원거리 데이터 실시간 동기화 복제, 랜섬웨어 무력 불변 가상 망 구성 등 복잡한 기업 인프라의 마일스톤 설계안을 제공합니다.
+              ITCON의 전문 설계 자문진이 서버 스토리지 견적 및 고객 니즈에 맞는 솔루션을 제공 합니다.
             </p>
           </div>
           <div className="shrink-0">

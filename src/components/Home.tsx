@@ -419,7 +419,7 @@ export const Home: React.FC = () => {
               <div className="p-3 bg-white/5 w-fit rounded-xl border border-white/10 text-brand">
                 <PhoneCall className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-base font-bold tracking-tight">인프라 구축 견적 및 설계 컨설팅</h3>
+              <h3 className="text-base font-bold tracking-tight">서버 스토리지 견적 및 솔루션 맞춤 설계 지원</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
                 서버 증설, 노후 스토리지 교체, 클라우드 가상화 마이그레이션이 고민이신가요? ITCON의 전문 설계 인력이 무상으로 기술 사전 진단 및 제품 제안을 드립니다.
               </p>

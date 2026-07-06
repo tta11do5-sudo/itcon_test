@@ -25,11 +25,11 @@ export const AboutUs: React.FC = () => {
   ];
 
   const milestones = [
-    { year: '2026', title: '인프라 혁신 리뉴얼 및 웹 플랫폼 통합', detail: '디지털 트랜스포메이션 가속화를 위한 웹 솔루션 주문 및 고객지원 시스템 전격 통합 런칭.' },
-    { year: '2024', title: '초고속 AI GPU 서버 공급 라인 증설', detail: '딥러닝 및 거대 생성 모델 전용 가속 서버 엔지니어링팀을 발족하고 대규모 가속 서버 구축 계약 수주.' },
-    { year: '2022', title: '글로벌 엔터프라이즈 스토리지 골드 파트너쉽', detail: '세계 최고 수준의 스토리지 및 가상화 소프트웨어 벤더사들과 긴밀한 골드 파트너 관계 체결.' },
-    { year: '2020', title: 'HCI(Hyper-Converged Infrastructure) 사업 전개', detail: '차세대 서버 가상화 시스템 및 하드웨어 가상 디바이스 통합 비즈니스로의 도약.' },
-    { year: '2018', title: '주식회사 ITCON (아이티콘) 설립', detail: '정예 서버 엔지니어 5인으로 시작하여 서울시 영등포구 본사 설립 및 데이터센터 전담 유지보수 개시.' },
+    { year: '2018', title: 'KT매니지드 사업 협정', detail: '정보통신공사업 등록 특허 출원중' },
+    { year: '2012', title: 'HP 체널 파트너 등록', detail: '연구 개발 전담부서 와이즈기가 NAS 총판계약' },
+    { year: '2010', title: '통신판매업 신고, 소프트웨어 사업자 등록', detail: '' },
+    { year: '2008', title: '벤처기업인증', detail: 'Dell International 시스템 통합 사업지 지정 Fortinet Korea 협력사 계약' },
+    { year: '2007', title: '주식회사 아이티콘 설립', detail: '정예 서버 엔지니어 5인으로 시작하여 경원대학교 창업센터에서 본사 설립 및 데이터 전담 유지보수 개시' },
   ];
 
   return (
@@ -39,8 +39,9 @@ export const AboutUs: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 to-slate-900 opacity-90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white">About ITCON</h1>
-          <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            ITCON은 축적된 데이터 테크놀로지와 숙련된 전담 엔지니어 팀을 갖춘 <span className="text-brand font-semibold">서버, 스토리지, 가상화 전문 기업</span>입니다.
+          <p className="text-sm md:text-base text-white max-w-2xl mx-auto leading-relaxed">
+            ITCON은 축적된 데이터 테크놀로지와 숙련된 전담 엔지니어 팀을 갖춘 <br />
+            <span className="text-white font-semibold">서버,스토리지,가상화 전문기업 입니다.</span>
           </p>
         </div>
       </section>
@@ -139,9 +140,11 @@ export const AboutUs: React.FC = () => {
                 <h4 className="text-base font-bold text-slate-900 group-hover:text-brand transition-colors">
                   {milestone.title}
                 </h4>
-                <p className="text-xs text-slate-500 leading-relaxed max-w-2xl">
-                  {milestone.detail}
-                </p>
+                {milestone.detail && (
+                  <p className="text-xs text-slate-500 leading-relaxed max-w-2xl">
+                    {milestone.detail}
+                  </p>
+                )}
               </div>
             </motion.div>
           ))}
