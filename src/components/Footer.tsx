@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
           <span className="w-1.5 h-1.5 bg-[#2B3A8F] rounded-full inline-block" />
           <span>IT CON (아이티콘)</span>
           <span className="text-slate-300">|</span>
-          <span className="font-normal text-slate-400">대표자: 홍길동 | 사업자등록번호: 120-00-00000</span>
+          <span className="font-normal text-slate-400">대표자: 이준형 | 사업자등록번호: 114-86-61445</span>
         </p>
         <p>서울시 영등포구 양평로21길 26 아이에스BIZ타워 26층 2601호</p>
         <p>

@@ -66,18 +66,21 @@ export const Home: React.FC = () => {
     {
       icon: <Cpu className="h-5 w-5 text-[#0056b3]" />,
       title: 'ENTERPRISE SERVER',
+      shortTitle: 'SERVER',
       desc: '고가용성과 독보적인 연산력을 갖춘 엔터프라이즈급 서버 라인업을 최적 설계하여 공급합니다.',
       tags: ['x86 가용 서버', 'GPU 인공지능 서버', '고집적 랙마운트']
     },
     {
       icon: <HardDrive className="h-5 w-5 text-[#0056b3]" />,
       title: 'NEXT-GEN STORAGE',
+      shortTitle: 'STORAGE',
       desc: '초고속 올플래시 스토리지부터 대용량 하이브리드 솔루션까지, 완벽한 백업 및 가동 안정성을 갖춘 스토리지 인프라를 보장합니다.',
       tags: ['All-Flash NVMe', '하이브리드 SAN/NAS', '오브젝트 스토리지']
     },
     {
       icon: <ShieldCheck className="h-5 w-5 text-[#0056b3]" />,
       title: 'VIRTUAL & SECURITY S/W',
+      shortTitle: 'Solution',
       desc: '클라우드 가상화 인프라, 백업 자동화 시스템, 최고 규격의 데이터 보호 및 보안 소프트웨어를 최적 통합 제안합니다.',
       tags: ['서버/스토리지 가상화', '실시간 백업 솔루션', '랜섬웨어 방어']
     }
@@ -130,14 +133,24 @@ export const Home: React.FC = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-slate-900 tracking-tight"
                 id="hero-title"
               >
-                {config.sloganTitle.includes(' ') ? (
+                {config.sloganTitle.includes('\n') ? (
                   <>
-                    {config.sloganTitle.substring(0, Math.floor(config.sloganTitle.length / 2))} <br/>
-                    <span className="text-[#0056b3]">{config.sloganTitle.substring(Math.floor(config.sloganTitle.length / 2))}</span>
+                    {config.sloganTitle.split('\n')[0]} <br/>
+                    <span className="text-[#0056b3]">{config.sloganTitle.split('\n')[1]}</span>
+                  </>
+                ) : config.sloganTitle.includes(', ') ? (
+                  <>
+                    {config.sloganTitle.split(', ')[0]} <br/>
+                    <span className="text-[#0056b3]">{config.sloganTitle.split(', ')[1]}</span>
+                  </>
+                ) : config.sloganTitle.includes('ITCON') ? (
+                  <>
+                    {config.sloganTitle.replace('ITCON', '').trim()} <br/>
+                    <span className="text-[#0056b3]">ITCON</span>
                   </>
                 ) : (
                   <>
-                    미래를 연결하는 <br/>
+                    혁신적인 IT솔루션의 표준 <br/>
                     <span className="text-[#0056b3]">{config.sloganTitle}</span>
                   </>
                 )}
@@ -147,7 +160,7 @@ export const Home: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-base md:text-lg text-slate-500 max-w-md leading-relaxed"
+                className="text-base md:text-lg text-slate-500 max-w-md leading-relaxed whitespace-pre-line"
                 id="hero-subtitle"
               >
                 {config.sloganSubtitle}
@@ -184,7 +197,7 @@ export const Home: React.FC = () => {
                     <div className="w-10 h-10 bg-white shadow-sm rounded-lg mb-3 flex items-center justify-center">
                       {service.icon}
                     </div>
-                    <h3 className="font-bold text-xs text-slate-900 tracking-wider uppercase">{service.title.split(' ')[1] || service.title}</h3>
+                    <h3 className="font-bold text-xs text-slate-900 tracking-wider uppercase">{service.shortTitle || service.title.split(' ')[1] || service.title}</h3>
                     <p className="text-[11px] text-slate-400 mt-1.5 leading-snug">{service.desc.substring(0, 32)}...</p>
                   </div>
                 </div>

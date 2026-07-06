@@ -25,8 +25,8 @@ const AppContext = createContext<AppContextProps | undefined>(undefined);
 
 const defaultConfig: SiteConfig = {
   primaryColor: '#0A2540',
-  sloganTitle: '혁신적인 IT 솔루션의 표준, ITCON',
-  sloganSubtitle: '서버, 스토리지, 소프트웨어 설계부터 유지보수까지 기업 맞춤형 인프라를 제공합니다.',
+  sloganTitle: '혁신적인 IT솔루션의 표준\nITCON',
+  sloganSubtitle: '서버,스토리지,소프트웨어 설계부터 유지보수까지\n기업 맞춤형 인프라를 제공합니다.',
   fontFamily: 'sans',
 };
 
