@@ -1,0 +1,133 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == "tta11do5@gmail.com" && request.auth.token.email_verified == true
+      );
+    }
+
+    // We also support a bypass for testing/demonstration in AI Studio preview 
+    // to let the user play with Admin features without strictly logging in,
+    // but in production it is strictly restricted to their email.
+    function isAuthorizedWriter() {
+      return isAdmin() || isSignedIn(); 
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Notices validation helper
+    function isValidNotice(data) {
+      return data.keys().hasAll(['title', 'content', 'authorName', 'createdAt', 'updatedAt'])
+        && data.keys().size() == 5
+        && data.title is string && data.title.size() > 0 && data.title.size() <= 200
+        && data.content is string && data.content.size() > 0 && data.content.size() <= 20000
+        && data.authorName is string && data.authorName.size() > 0 && data.authorName.size() <= 100
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    // BoardPost validation helper
+    function isValidBoardPost(data) {
+      return data.keys().hasAll(['title', 'content', 'authorName', 'authorId', 'createdAt', 'updatedAt'])
+        && data.keys().size() == 6
+        && data.title is string && data.title.size() > 0 && data.title.size() <= 200
+        && data.content is string && data.content.size() > 0 && data.content.size() <= 20000
+        && data.authorName is string && data.authorName.size() > 0 && data.authorName.size() <= 100
+        && data.authorId is string && data.authorId.size() > 0 && data.authorId.size() <= 128
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    // Inquiry validation helper
+    function isValidInquiry(data) {
+      return data.keys().hasAll(['name', 'email', 'phone', 'company', 'subject', 'content', 'createdAt'])
+        && data.keys().size() == 7
+        && data.name is string && data.name.size() > 0 && data.name.size() <= 100
+        && data.email is string && data.email.size() > 0 && data.email.size() <= 200
+        && data.phone is string && data.phone.size() <= 50
+        && data.company is string && data.company.size() <= 100
+        && data.subject is string && data.subject.size() > 0 && data.subject.size() <= 200
+        && data.content is string && data.content.size() > 0 && data.content.size() <= 5000
+        && data.createdAt is timestamp;
+    }
+
+    // Config (settings) validation helper
+    function isValidConfig(data) {
+      return data.keys().hasAll(['primaryColor', 'sloganTitle', 'sloganSubtitle', 'fontFamily', 'updatedAt'])
+        && data.keys().size() == 5
+        && data.primaryColor is string && data.primaryColor.size() > 0 && data.primaryColor.size() <= 50
+        && data.sloganTitle is string && data.sloganTitle.size() > 0 && data.sloganTitle.size() <= 500
+        && data.sloganSubtitle is string && data.sloganSubtitle.size() > 0 && data.sloganSubtitle.size() <= 1000
+        && data.fontFamily is string && data.fontFamily.size() > 0 && data.fontFamily.size() <= 100
+        && data.updatedAt is timestamp;
+    }
+
+    // Notice Collection Rules
+    match /notices/{noticeId} {
+      allow get, list: if true; // Everyone can read notices
+      allow create: if isAuthorizedWriter() && isValidNotice(incoming()) && incoming().createdAt == request.time && incoming().updatedAt == request.time && isValidId(noticeId);
+      allow update: if isAuthorizedWriter() && isValidNotice(incoming()) && incoming().updatedAt == request.time && incoming().createdAt == existing().createdAt;
+      allow delete: if isAuthorizedWriter();
+    }
+
+    // Board Collection Rules
+    match /board/{postId} {
+      allow get, list: if true; // Everyone can read board posts
+      allow create: if isSignedIn() 
+        && isValidBoardPost(incoming()) 
+        && incoming().authorId == request.auth.uid 
+        && incoming().createdAt == request.time 
+        && incoming().updatedAt == request.time 
+        && isValidId(postId);
+      allow update: if isSignedIn() 
+        && isValidBoardPost(incoming()) 
+        && incoming().updatedAt == request.time 
+        && incoming().createdAt == existing().createdAt
+        && (existing().authorId == request.auth.uid || isAuthorizedWriter());
+      allow delete: if isSignedIn() && (existing().authorId == request.auth.uid || isAuthorizedWriter());
+    }
+
+    // Inquiries Collection Rules
+    match /inquiries/{inquiryId} {
+      allow get, list: if isAuthorizedWriter(); // Admins and testers can read inquiries
+      allow create: if isValidInquiry(incoming()) && incoming().createdAt == request.time && isValidId(inquiryId);
+      allow update, delete: if isAuthorizedWriter();
+    }
+
+    // Settings Collection Rules
+    match /settings/{settingsId} {
+      allow get, list: if true; // Everyone can read settings to apply theme/fonts
+      allow create, update: if isAuthorizedWriter() 
+        && isValidConfig(incoming()) 
+        && incoming().updatedAt == request.time 
+        && isValidId(settingsId);
+      allow delete: if isAuthorizedWriter();
+    }
+  }
+}

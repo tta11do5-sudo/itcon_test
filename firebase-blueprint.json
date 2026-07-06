@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "Notice": {
+      "title": "Notice",
+      "description": "Company announcements and news",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "authorName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "content", "authorName", "createdAt", "updatedAt"]
+    },
+    "BoardPost": {
+      "title": "BoardPost",
+      "description": "General community board posts",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "content", "authorName", "authorId", "createdAt", "updatedAt"]
+    },
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "Customer contact form submissions",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "company": { "type": "string" },
+        "subject": { "type": "string" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "subject", "content", "createdAt"]
+    },
+    "Config": {
+      "title": "Config",
+      "description": "Website customization settings and theme overrides",
+      "type": "object",
+      "properties": {
+        "primaryColor": { "type": "string" },
+        "sloganTitle": { "type": "string" },
+        "sloganSubtitle": { "type": "string" },
+        "fontFamily": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["primaryColor", "sloganTitle", "sloganSubtitle", "fontFamily", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/notices/{noticeId}": {
+      "schema": "Notice",
+      "description": "Collection of company announcements"
+    },
+    "/board/{postId}": {
+      "schema": "BoardPost",
+      "description": "Collection of general discussion or inquiry posts"
+    },
+    "/inquiries/{inquiryId}": {
+      "schema": "Inquiry",
+      "description": "Collection of customer inquiries"
+    },
+    "/settings/{settingsId}": {
+      "schema": "Config",
+      "description": "Configuration settings document (usually 'main')"
+    }
+  }
+}

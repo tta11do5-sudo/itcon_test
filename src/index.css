@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: var(--brand-color, #0A2540);
+  --color-brand-hover: var(--brand-color-hover, #0056b3);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-sans-custom {
+  font-family: 'Inter', 'Noto Sans KR', sans-serif !important;
+}
+
+.font-serif-custom {
+  font-family: 'Playfair Display', 'Noto Sans KR', serif !important;
+}
+
+.font-mono-custom {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
