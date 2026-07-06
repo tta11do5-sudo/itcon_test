@@ -164,7 +164,7 @@ export const ContactUs: React.FC = () => {
 
           <div className="pt-6 border-t border-slate-100 flex items-center space-x-2 text-xs font-medium text-slate-400">
             <Landmark className="h-4.5 w-4.5 text-slate-300" />
-            <span>사업자등록번호: 120-00-00000 | ITCON Corp.</span>
+            <span>사업자등록번호: 114-86-61445 | ITCON Corp.</span>
           </div>
         </div>
 
