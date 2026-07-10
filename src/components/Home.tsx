@@ -121,7 +121,7 @@ export const Home: React.FC = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-block px-3 py-1 bg-blue-50 text-[#0056b3] text-xs font-bold rounded-md uppercase tracking-wider"
+                className="inline-block px-3 py-1 bg-blue-50 text-[#0056b3] text-xs font-bold rounded-md tracking-wider"
               >
                 Premium IT Solutions Partner
               </motion.span>

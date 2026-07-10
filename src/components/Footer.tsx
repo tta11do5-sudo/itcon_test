@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
       <div className="text-[11px] text-slate-400 space-y-1">
         <p className="font-bold text-slate-600 flex items-center space-x-2">
           <span className="w-1.5 h-1.5 bg-[#2B3A8F] rounded-full inline-block" />
-          <span>IT CON (아이티콘)</span>
+          <span>주식회사 아이티콘</span>
           <span className="text-slate-300">|</span>
           <span className="font-normal text-slate-400">대표자: 이준형 | 사업자등록번호: 114-86-61445</span>
         </p>

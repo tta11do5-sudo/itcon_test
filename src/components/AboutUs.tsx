@@ -84,11 +84,46 @@ export const AboutUs: React.FC = () => {
   ];
 
   const milestones = [
-    { year: '2018', title: 'KT매니지드 사업 협정', detail: '정보통신공사업 등록 특허 출원중' },
-    { year: '2012', title: 'HP 체널 파트너 등록', detail: '연구 개발 전담부서 와이즈기가 NAS 총판계약' },
-    { year: '2010', title: '통신판매업 신고, 소프트웨어 사업자 등록', detail: '' },
-    { year: '2008', title: '벤처기업인증', detail: 'Dell International 시스템 통합 사업지 지정 Fortinet Korea 협력사 계약' },
-    { year: '2007', title: '주식회사 아이티콘 설립', detail: '정예 서버 엔지니어 5인으로 시작하여 경원대학교 창업센터에서 본사 설립 및 데이터 전담 유지보수 개시' },
+    {
+      year: '2023',
+      title: '특허 출원중 (제 10-2023-0160932호)',
+      detail: '',
+    },
+    {
+      year: '2021',
+      title: '정보통신공사업 등록 (제 203516호)',
+      detail: '',
+    },
+    {
+      year: '2018',
+      title: 'KT 매니지드 서비스 사업 협정',
+      detail: '',
+    },
+    {
+      year: '2015',
+      title: 'olleh biz GIGA Office 상품 위탁 영업 계약',
+      detail: '',
+    },
+    {
+      year: '2012',
+      title: 'HP 체널 파트너 등록',
+      detail: '연구개발 전담부서 , 와이즈기가 NAS 총판 계약',
+    },
+    {
+      year: '2010',
+      title: '통신판매업 신고, 소프트웨어 사업자 등록',
+      detail: '',
+    },
+    {
+      year: '2008',
+      title: 'Dell International과 시스템 계약',
+      detail: '벤처기업 인증(제20080101608호)',
+    },
+    {
+      year: '2007',
+      title: '주식회사 아이티콘 설립',
+      detail: '가천대학교 창업센터에서 본사 설립 및 KT 기업고객서비스 본부 호스팅 및 시스템 협력사 협정',
+    },
   ];
 
   return (
@@ -246,7 +281,7 @@ export const AboutUs: React.FC = () => {
                   </div>
                   <div className="space-y-0.5">
                     <span className="text-[9px] font-bold text-slate-400 block">TEL</span>
-                    <p className="text-xs font-semibold text-slate-800">02-3439-1140</p>
+                    <p className="text-xs font-semibold text-slate-800">02-2070-3200</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -255,7 +290,7 @@ export const AboutUs: React.FC = () => {
                   </div>
                   <div className="space-y-0.5">
                     <span className="text-[9px] font-bold text-slate-400 block">FAX</span>
-                    <p className="text-xs font-semibold text-slate-800">02-3439-1141</p>
+                    <p className="text-xs font-semibold text-slate-800">02-2070-3210</p>
                   </div>
                 </div>
               </div>
