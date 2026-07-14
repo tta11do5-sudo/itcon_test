@@ -33,10 +33,10 @@ export const Navbar: React.FC = () => {
               id="nav-logo"
             >
               <div className="flex flex-col items-start text-left select-none">
-                <span className="text-2xl font-extrabold tracking-[0.06em] text-[#2B3A8F] group-hover:text-brand transition-colors leading-none uppercase font-sans">
+                <span className="text-3xl md:text-4xl font-extrabold tracking-[0.06em] text-[#2B3A8F] group-hover:text-brand transition-colors leading-none uppercase font-sans">
                   IT CON
                 </span>
-                <span className="text-[8px] text-slate-400 font-semibold tracking-[0.01em] mt-1.5 leading-none font-sans">
+                <span className="text-[9px] md:text-[11px] text-slate-400 font-semibold tracking-[0.01em] mt-1.5 leading-none font-sans">
                   Information Technology Convergence
                 </span>
               </div>
