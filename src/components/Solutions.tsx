@@ -53,7 +53,7 @@ export const Solutions: React.FC = () => {
       specs: [
         'Active-Active 듀얼 컨트롤러 아키텍처 무중단 이중화',
         '최대 200,000 IOPS 및 PCIe Gen4 NVMe 기본 통합',
-        '실시간 인라인 중복제거 및 압축율 최고 5:1 보증',
+        '실시간 인라인 중복제거 및 압축률 최고 5:1 보증',
       ],
       badge: '초고속 성능',
     },
@@ -111,7 +111,7 @@ export const Solutions: React.FC = () => {
       <section className="bg-slate-900 text-white py-16 text-center space-y-4">
         <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white">솔루션 & 서비스</h1>
         <p className="text-xs md:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          ITCON은 세계 최고의 가동 안정성을 갖춘 서버, 스토리지를 엄선하고 이를 원활히 매니지드할 소프트웨어 통합 패키지를 설계 제안합니다.
+          ITCON은 세계 최고 수준의 가동 안정성을 갖춘 서버와 스토리지를 엄선하고, 이를 안정적으로 통합 운영·관리할 수 있는 소프트웨어 패키지를 설계하여 제안합니다.
         </p>
       </section>
 
@@ -201,9 +201,9 @@ export const Solutions: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 border border-slate-800 shadow-xl flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="space-y-3 max-w-2xl">
-            <h3 className="text-xl md:text-2xl font-bold tracking-tight">서버 스토리지 견적 및 솔루션 맞춤 설계 지원</h3>
+            <h3 className="text-xl md:text-2xl font-bold tracking-tight">서버·스토리지 견적 및 솔루션 맞춤 설계 지원</h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              ITCON의 전문 설계 자문진이 서버 스토리지 견적 및 고객 니즈에 맞는 솔루션을 제공 합니다.
+              ITCON의 전문 설계 자문진이 서버·스토리지 견적 및 고객의 요구사항에 맞는 솔루션을 제공합니다.
             </p>
           </div>
           <div className="shrink-0">

@@ -186,7 +186,7 @@ export const ContactUs: React.FC = () => {
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-slate-900">문의 등록이 완료되었습니다.</h3>
                   <p className="text-xs text-slate-500 max-w-md mx-auto leading-relaxed">
-                    작성해 주신 요구조건은 당사 CRM 시스템으로 접수되었으며, 24시간 내 전문 엔지니어가 메일이나 전화로 정밀 회신드릴 것을 보장합니다.
+                    작성해 주신 문의 사항은 당사 CRM 시스템으로 접수되었으며, 24시간 이내에 전문 엔지니어가 메일이나 전화로 신속하고 정확하게 회신해 드릴 것을 약속드립니다.
                   </p>
                   <div className="pt-2 flex flex-col items-center justify-center gap-1.5">
                     {supabaseStatus === 'success' && (
@@ -216,7 +216,7 @@ export const ContactUs: React.FC = () => {
               >
                 <div className="pb-2 border-b border-slate-100">
                   <h3 className="text-lg font-bold text-slate-900">온라인 견적 상담 및 요구사항 등록</h3>
-                  <p className="text-xs text-slate-400">아래 폼을 입력해 주시면 신속하게 검토하여 상담 제안을 올립니다.</p>
+                  <p className="text-xs text-slate-400">아래 정보를 입력해 주시면 신속하게 검토하여 상담 제안을 드리겠습니다.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

@@ -85,44 +85,39 @@ export const AboutUs: React.FC = () => {
 
   const milestones = [
     {
-      year: '2023',
-      title: '특허 출원중 (제 10-2023-0160932호)',
+      year: '2025',
+      title: '특허등록 (제10-2756452호)',
       detail: '',
     },
     {
       year: '2021',
-      title: '정보통신공사업 등록 (제 203516호)',
+      title: '정보통신공사업 등록 (제293516호)',
       detail: '',
     },
     {
-      year: '2018',
-      title: 'KT 매니지드 서비스 사업 협정',
-      detail: '',
+      year: '2016',
+      title: '서울시 영등포구 양평로 21길 26 사업장 이전',
+      detail: 'Lenovo Korea | KT 매니지드 서버공급 협정',
     },
     {
-      year: '2015',
-      title: 'olleh biz GIGA Office 상품 위탁 영업 계약',
-      detail: '',
+      year: '2014',
+      title: '기업부설연구소 등록 (제2014111748호)',
+      detail: 'KT솔루션 전문점 계약, KT Gigaoffice 위탁점(AA00893)',
     },
     {
-      year: '2012',
-      title: 'HP 체널 파트너 등록',
-      detail: '연구개발 전담부서 , 와이즈기가 NAS 총판 계약',
+      year: '2013',
+      title: '연구전담부서 (제2013151899호)',
+      detail: 'HP 채널파트너 등록',
     },
     {
-      year: '2010',
-      title: '통신판매업 신고, 소프트웨어 사업자 등록',
-      detail: '',
-    },
-    {
-      year: '2008',
-      title: 'Dell International과 시스템 계약',
-      detail: '벤처기업 인증(제20080101608호)',
+      year: '2009',
+      title: '벤처기업 등록 (제20090102200호)',
+      detail: 'Dell International 시스템통합 사업자',
     },
     {
       year: '2007',
-      title: '주식회사 아이티콘 설립',
-      detail: '가천대학교 창업센터에서 본사 설립 및 KT 기업고객서비스 본부 호스팅 및 시스템 협력사 협정',
+      title: '주식회사 아이티콘 법인설립',
+      detail: 'KT 기업고객본부 호스팅 및 시스템 협력사 협정',
     },
   ];
 
@@ -135,7 +130,7 @@ export const AboutUs: React.FC = () => {
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white">About ITCON</h1>
           <p className="text-sm md:text-base text-white max-w-2xl mx-auto leading-relaxed">
             ITCON은 축적된 데이터 테크놀로지와 숙련된 전담 엔지니어 팀을 갖춘 <br />
-            <span className="text-white font-semibold">서버,스토리지,가상화 전문기업 입니다.</span>
+            <span className="text-white font-semibold">서버, 스토리지, 가상화 전문기업입니다.</span>
           </p>
         </div>
       </section>
@@ -312,7 +307,7 @@ export const AboutUs: React.FC = () => {
                       <span className="text-[#A17E46] mr-1.5">9호선</span>선유도역
                     </p>
                     <p className="text-[11px] text-slate-500 leading-relaxed font-sans">
-                      9호선 선유도역 7번 출구에서 나와서 그대로 직진하시면 도보 약 3분 거리에 위치하고 있습니다.
+                      9호선 선유도역 7번 출구로 나와 그대로 직진하시면 도보 약 3분 거리에 위치하고 있습니다.
                     </p>
                   </div>
                 </div>
@@ -342,9 +337,9 @@ export const AboutUs: React.FC = () => {
 
       {/* 6. Contact Call To Action */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-brand/5 py-12 rounded-3xl border border-brand/10 space-y-6">
-        <h3 className="text-2xl font-bold text-slate-900">당사의 뛰어난 솔루션을 통해 혁신을 달성하십시오.</h3>
+        <h3 className="text-2xl font-bold text-slate-900">당사의 차별화된 솔루션으로 비즈니스 혁신을 실현해 보십시오.</h3>
         <p className="text-xs text-slate-500 max-w-xl mx-auto leading-relaxed">
-          서버 부하 분산, 클라우드 이전, 완벽한 백업 환경 구축 등 어떤 니즈이든 ITCON의 검증된 고정 엔지니어링팀이 성실히 안내해 드립니다.
+          서버 부하 분산, 클라우드 이전, 완벽한 백업 환경 구축 등 어떤 요구사항이든 ITCON의 검증된 전문 엔지니어 팀이 성실히 안내해 드립니다.
         </p>
         <button
           onClick={() => setPage('contact')}

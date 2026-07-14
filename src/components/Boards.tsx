@@ -373,7 +373,7 @@ export const Boards: React.FC = () => {
       <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 border-b border-slate-200 pb-5">
         <div className="space-y-1.5">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">고객 지원 및 게시판</h1>
-          <p className="text-xs text-slate-500">ITCON의 공지사항 및 다양한 문의 및 기술 질의를 나누실 수 있습니다.</p>
+          <p className="text-xs text-slate-500">ITCON의 공지사항과 다양한 문의 및 기술 질의를 나누실 수 있습니다.</p>
         </div>
 
         {/* Board switcher */}
@@ -442,7 +442,7 @@ export const Boards: React.FC = () => {
                   rows={8}
                   value={formContent}
                   onChange={(e) => setFormContent(e.target.value)}
-                  placeholder="풍부한 상세 내용과 정황을 자세히 적어주시면 신속히 답변해 드립니다."
+                  placeholder="상세한 내용과 상황을 자세히 적어주시면 신속히 답변해 드리겠습니다."
                   className="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand leading-relaxed"
                 />
               </div>
@@ -460,7 +460,7 @@ export const Boards: React.FC = () => {
                   className="px-5 py-2 text-xs font-semibold text-white bg-brand hover:bg-brand-hover rounded-lg flex items-center space-x-1 cursor-pointer focus:outline-none shadow-md shadow-brand/10"
                 >
                   <Check className="h-4 w-4" />
-                  <span>{isEditing ? '수정완료' : '등록하기'}</span>
+                  <span>{isEditing ? '수정 완료' : '등록하기'}</span>
                 </button>
               </div>
             </form>

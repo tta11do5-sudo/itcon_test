@@ -90,7 +90,7 @@ export const Home: React.FC = () => {
     {
       id: 'sample-1',
       title: '[안내] ITCON 공식 웹사이트 신규 런칭 및 사업부 개편 안내',
-      content: '안녕하세요. ITCON 입니다. 차세대 솔루션 맞춤 공급을 강화하기 위해 공식 웹사이트를 개편 런칭하였습니다.',
+      content: '안녕하세요. ITCON입니다. 차세대 솔루션 맞춤 공급을 강화하기 위해 공식 웹사이트를 새롭게 개편하여 오픈하였습니다.',
       authorName: '관리자',
       createdAt: new Date('2026-07-01'),
       updatedAt: new Date('2026-07-01'),
@@ -150,7 +150,7 @@ export const Home: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    혁신적인 IT솔루션의 표준 <br/>
+                    혁신적인 IT 솔루션의 표준 <br/>
                     <span className="text-[#0056b3]">{config.sloganTitle}</span>
                   </>
                 )}
